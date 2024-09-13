@@ -1,20 +1,6 @@
 # The-Forgotten-Rooms
 Adventure Game :)
 
-Project Name: text_adventure
-Directory Name: text_adventure/
-
-Files to Submit:
- - main.c
- - game.c
- - game.h
-
-Mandatory Functions:
- - void start_game(void);
- - void navigate_rooms(void);
- - void show_inventory(void);
- - void pick_up_item(const char *item);
-
 Objective:
 You will create a simple text-based adventure game. The player will navigate between rooms, pick up items, and use an inventory system. The game will display room descriptions, available items, and possible exits.
 
