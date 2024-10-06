@@ -15,5 +15,7 @@ Use simple commands like search, pickup, drop, and use to get around and interac
 Tech Stuff
 
 Made with C: A classic, clean text-based adventure, coded entirely in C. No flashy graphics-for now 👀-just pure retro fun. Organized Code: It’s all nicely split into files like game.c, game.h, and main.c. Easy to maintain and expand.
+An Adventure Game You Didn’t Know You Needed !
 
-The Forgotten Rooms is a mix of adventure, puzzles, and a narrator who won’t hesitate to roast you. Can you survive the sass and collect all the items?
+The Forgotten Rooms is a hilarious, mind-bending text-based adventure(for now 👀) where you explore weird rooms, collect stuff, solve puzzles, and try not to lose your sanity.
+Can you survive the sass and collect all the items?
