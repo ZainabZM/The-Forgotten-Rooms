@@ -1,52 +1,19 @@
 # The-Forgotten-Rooms
-Adventure Game :)
 
-Project Name: text_adventure
-Directory Name: text_adventure/
+An Adventure Game You Didn’t Know You Needed !
 
-Files to Submit:
- - main.c
- - game.c
- - game.h
+The Forgotten Rooms is a hilarious, mind-bending text-based adventure(for now 👀) where you explore weird rooms, collect stuff, solve puzzles, and try not to lose your sanity. Oh, and the narrator? Yeah, they’ve got an attitude. They’ll guide you with sarcasm, jokes, and maybe some questionable advice. Good luck—you’ll need it.
 
-Mandatory Functions:
- - void start_game(void);
- - void navigate_rooms(void);
- - void show_inventory(void);
- - void pick_up_item(const char *item);
+Features
 
-Objective:
-You will create a simple text-based adventure game. The player will navigate between rooms, pick up items, and use an inventory system. The game will display room descriptions, available items, and possible exits.
+Explore Creepy Rooms: Wander through bizarre rooms filled with surprises, because why not? Some rooms are just there to mess with you. Item Hoarding: Pick up random junk, drop it, and hope it’s useful later. You start with nothing, so go fetch! Solve Weird Puzzles: Find hidden doors, crack your brain on puzzles, and scream into the void when you get stuck (kidding, but seriously, good luck). The Ancient Altar of Doom (Kinda): One special room with a major quest or a boss fight. Win, and the room poofs out of existence. No re-entry. Sassy Narrator: Oh, you’ll get plenty of “help” from the narrator. They’ve got jokes, sass, and probably a swear word or two when you mess up. Monsters & Invisibility: Yes, you can chug a Phantom Potion and go invisible, but watch out for the creepy monsters lurking around. Win by Collecting Stuff: Your goal is to find 10 important items. Easier said than done, right?
 
-Detailed Instructions:
-1. start_game
- - Prototype: void start_game(void);
- - Description:
-   This function will initialize the game and start the game loop. It should display an introduction, the starting room, and call navigate_rooms to allow the 
-   player to begin moving between rooms.
-2. navigate_rooms
- - Prototype: void navigate_rooms(void);
- - Description:
-   This function will handle player movement between rooms. The player should be able to move in at least 4 directions (north, south, east, west).
-3. show_inventory
- - Prototype: void show_inventory(void);
- - Description:
-   This function will display the player’s current inventory (the items they have picked up so far).
-4. pick_up_item
- - Prototype: void pick_up_item(const char *item);
- - Description:
-   This function allows the player to pick up an item if it’s available in the current room. The item should be added to their inventory.
-   
-Additional Requirements:
-You should have at least 4 rooms connected in some way (e.g., Living Room, Kitchen, Bedroom, Garden). Each room should have a unique description and possible exits. Each room should optionally have items that the player can pick up. The player should be able to move between rooms using simple commands (e.g., 'go north', 'go west').
+How to Play
 
-Bonus Ideas:
-Winning Condition: Add a goal or objective for the player, such as finding a hidden treasure or unlocking a specific door with an item.
-Inventory Limit: Limit the number of items the player can carry at one time.
-Enemies/Obstacles: Add simple challenges or enemies that block the player from moving freely.
-Suggested Commands:
-Movement: 'go north', 'go south', 'go east', 'go west'
-Picking up items: 'pick up [item]'
-Inventory: 'inventory'
-Quitting: 'exit' or 'quit'
+Use simple commands like search, pickup, drop, and use to get around and interact with the game world. Figure out what items you need, what rooms are hiding, and how to not get lost. Solve puzzles, avoid monsters, and keep your cool—well, try to, anyway.
 
+Tech Stuff
+
+Made with C: A classic, clean text-based adventure, coded entirely in C. No flashy graphics-for now 👀-just pure retro fun. Organized Code: It’s all nicely split into files like game.c, game.h, and main.c. Easy to maintain and expand.
+
+The Forgotten Rooms is a mix of adventure, puzzles, and a narrator who won’t hesitate to roast you. Can you survive the sass and collect all the items?
