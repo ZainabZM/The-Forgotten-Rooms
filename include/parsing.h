@@ -1,0 +1,93 @@
+#ifndef PARSING_H
+# define PARSING_H
+
+# include "../libft/libft.h"
+# include <fcntl.h>
+# include <stdio.h>
+# include <stdlib.h>
+
+# define MAX_DOORS 8
+
+typedef struct s_pos
+{
+	int			x;
+	int			y;
+}				t_pos;
+
+typedef struct s_colors
+{
+	int	r;
+	int	g;
+	int	b;
+}				t_colors;
+
+typedef struct s_door_dest
+{
+	int		id;
+	char	*map_path;
+}				t_door_dest;
+
+typedef struct s_config
+{
+	char		*north;
+	char		*south;
+	char		*west;
+	char		*east;
+	int			floor[3];
+	int			ceiling[3];
+	t_door_dest		doors[MAX_DOORS];
+	int				door_count;
+}				t_config;
+
+typedef struct s_map
+{
+	char		**data;
+	int			width;
+	int			height;
+	t_pos		player_start;
+	char		player_start_dir;
+	t_config	config;
+}				t_map;
+
+// parse.c
+void			parse_map(t_map *map, char *filename);
+
+// read_map.c
+void			read_config_lines(int fd, t_config *config);
+void			read_map_lines(int fd, t_map *map);
+void			remove_newline_at_end(char *line);
+
+// read_map_utils.c
+void			init_map(t_map *map, int *map_started);
+int				is_empty_line(char *line);
+void			error_empty_line(char *line);
+
+// parse_file.c
+int				open_cub_file(char *filename);
+
+// parse_map.c
+void			verify_map_copy(t_map *map);
+
+// parse_utils.c
+char			**map_copy(char **map_copy);
+int				is_traversable(char c);
+int				is_filled_or_wall(char c);
+void			check_valid_char(char c);
+
+// parse_config.c
+int				is_texture_line(char *line);
+int				is_color_line(char *line);
+int				is_door_line(char *line);
+void			free_config(t_config *config);
+
+// parse_textures_config.c
+int				parse_texture_line(char *line, t_config *config);
+
+// parse_colors_config.c
+int				parse_color_line(char *line, t_config *config);
+
+// parse_doors_config.c
+int				parse_door_line(char *line, t_config *config);
+
+
+#endif

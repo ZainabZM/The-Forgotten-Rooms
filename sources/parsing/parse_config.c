@@ -1,0 +1,53 @@
+#include "parsing.h"
+
+int	is_texture_line(char *line)
+{
+	if (!line)
+		return (0);
+	if (!ft_strncmp(line, "NO ", 3))
+		return (1);
+	if (!ft_strncmp(line, "SO ", 3))
+		return (1);
+	if (!ft_strncmp(line, "WE ", 3))
+		return (1);
+	if (!ft_strncmp(line, "EA ", 3))
+		return (1);
+	return (0);
+}
+
+int	is_color_line(char *line)
+{
+	if (line[0] == 'F')
+		return (1);
+	if (line[0] == 'C')
+		return (1);
+	return (0);
+}
+
+int	is_door_line(char *line)
+{
+	if (!line)
+		return (0);
+	if (line[0] == 'D' && line[1] >= '2' && line[1] <= '9')
+		return (1);
+	return (0);
+}
+
+void	free_config(t_config *config)
+{
+	int	i;
+
+	if (!config)
+		return ;
+	free(config->north);
+	free(config->south);
+	free(config->west);
+	free(config->east);
+
+	i = 0;
+	while (i < config->door_count)
+	{
+		free(config->doors[i].map_path);
+		i++;
+	}
+}
